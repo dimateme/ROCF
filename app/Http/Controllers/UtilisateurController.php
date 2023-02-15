@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Concertation;
 use App\Models\Direction;
 use App\Models\Partenaire;
 use App\Models\Role;
@@ -166,5 +167,17 @@ class UtilisateurController extends Controller
         $partenaire->partenaire = $request->input('partenaire');
         $partenaire->save();
         return redirect()->back();
+    }
+    public function concertation(){
+        return view('admin.concertation');
+    }
+    public function ajouter_concertation(Request $request){
+        $request->validate([
+            'concertation' => ['required', 'string', 'min:5', 'max:35' ]
+        ]);
+        $concertation = new Concertation();
+        $concertation->concertation = $request->input('concertation');
+        $concertation->save();
+        return redirect()->back()->with('message', 'La concertation a été crée avec succès');;
     }
 }

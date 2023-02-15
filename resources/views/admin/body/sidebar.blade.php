@@ -37,7 +37,7 @@
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">Table de concertation</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="layouts-horizontal.html">Ajouter</a></li>
+                                <li><a href="{{route('concertation')}}">Ajouter</a></li>
                             </ul>
                         </li>
                         <li>

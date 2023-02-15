@@ -27,8 +27,10 @@ Route::get('/connecter',            [Controller::class, 'connexion'])->name('con
 Route::get('/gestion',                [UtilisateurController::class, 'admin'])->name('gestion');
 Route::get('/utilisateur',                [UtilisateurController::class, 'vue_utilisateur']);
 Route::post('/ajouter_utilisateur',                [UtilisateurController::class, 'ajouter_utilisateur']);
-Route::get('partenaire',                [UtilisateurController::class, 'partenaire'])->name('partenaire');
-Route::post('ajouter_partenaire',                [UtilisateurController::class, 'ajouter_partenaire']);
+Route::get('/partenaire',                [UtilisateurController::class, 'partenaire'])->name('partenaire');
+Route::post('/ajouter_partenaire',                [UtilisateurController::class, 'ajouter_partenaire']);
+Route::get('/concertation',                [UtilisateurController::class, 'concertation'])->name('concertation');
+Route::post('/ajouter_concertation',                [UtilisateurController::class, 'ajouter_concertation']);
 //utilisateur routes
 Route::post('/connecter',                [UtilisateurController::class, 'connecter']);
 Route::get('/accueil',                [UtilisateurController::class, 'deconnecter'])->name('deconnecter');
